@@ -1,1 +1,1 @@
-export default function handler(req, res) { res.status(200).json({ message: \"Hello from API\" }); }
+export default function handler(req, res) { res.status(200).json({ message: 'Hello from API', env: { NODE_ENV: process.env.NODE_ENV, MONGODB_URI_EXISTS: !!process.env.MONGODB_URI, NEXTAUTH_SECRET_EXISTS: !!process.env.NEXTAUTH_SECRET, NEXTAUTH_URL: process.env.NEXTAUTH_URL } }); }
