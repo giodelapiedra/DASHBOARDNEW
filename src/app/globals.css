@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Force text to be black in all components */
+p, h1, h2, h3, h4, h5, h6, span, a, button, li, div {
+  color: #000000 !important;
+}
+
+/* Only allow specific elements to have different colors */
+a.text-blue-600, a.text-blue-800, a.hover\:text-blue-600, a.hover\:text-blue-800,
+button.bg-blue-600, button.bg-blue-700, button.hover\:bg-blue-700,
+a.bg-blue-600, a.bg-blue-700, a.hover\:bg-blue-700 {
+  color: inherit !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
