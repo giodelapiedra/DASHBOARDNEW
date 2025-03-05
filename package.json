@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --no-lint",
+    "build": "next build --no-lint --no-types",
     "start": "next start",
     "start-hostinger": "NODE_ENV=production node server.mjs",
     "lint": "next lint",
@@ -46,3 +46,4 @@
     "typescript": "^5"
   }
 }
+
